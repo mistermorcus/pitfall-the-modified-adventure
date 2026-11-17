@@ -17,9 +17,9 @@ using Microsoft.Win32;
 [assembly: AssemblyCompany("Pitfall Modified Project")]
 [assembly: AssemblyProduct("Pitfall Modified")]
 [assembly: AssemblyCopyright("Copyright © 2026 Pitfall Modified Project")]
-[assembly: AssemblyVersion("0.3.1.0")]
-[assembly: AssemblyFileVersion("0.3.1.0")]
-[assembly: AssemblyInformationalVersion("0.3.1")]
+[assembly: AssemblyVersion("0.3.2.0")]
+[assembly: AssemblyFileVersion("0.3.2.0")]
+[assembly: AssemblyInformationalVersion("0.3.2")]
 
 namespace PitfallModifiedInstaller
 {
@@ -720,7 +720,7 @@ namespace PitfallModifiedInstaller
             using (RegistryKey key = Registry.CurrentUser.CreateSubKey(UninstallRegistryPath)) {
                 if (key == null) throw new InvalidOperationException("Windows could not register the uninstaller.");
                 key.SetValue("DisplayName", "Pitfall Modified", RegistryValueKind.String);
-                key.SetValue("DisplayVersion", "0.3.1", RegistryValueKind.String);
+                key.SetValue("DisplayVersion", "0.3.2", RegistryValueKind.String);
                 key.SetValue("Publisher", "Pitfall Modified Project", RegistryValueKind.String);
                 key.SetValue("InstallLocation", root, RegistryValueKind.String);
                 key.SetValue("DisplayIcon", gameExe, RegistryValueKind.String);

@@ -9,7 +9,8 @@
     X(auxGetDevCapsA) X(auxGetNumDevs) X(auxGetVolume) X(auxSetVolume) \
     X(joyGetDevCapsA) X(joyGetNumDevs) X(joyGetPos) X(joyReleaseCapture) \
     X(joySetCapture) X(mciSendCommandA) X(mciSendStringA) X(sndPlaySoundA) \
-    X(timeBeginPeriod) X(timeEndPeriod) X(timeGetTime) X(timeKillEvent) \
+    X(timeBeginPeriod) X(timeEndPeriod) X(timeGetDevCaps) \
+    X(timeGetSystemTime) X(timeGetTime) X(timeKillEvent) \
     X(timeSetEvent) X(waveOutClose) X(waveOutGetNumDevs) \
     X(waveOutGetPosition) X(waveOutOpen) X(waveOutPause) \
     X(waveOutPrepareHeader) X(waveOutReset) X(waveOutRestart) \

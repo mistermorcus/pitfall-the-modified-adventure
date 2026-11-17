@@ -14,6 +14,8 @@ EXPORTS
     sndPlaySoundA=proxy_sndPlaySoundA
     timeBeginPeriod=proxy_timeBeginPeriod
     timeEndPeriod=proxy_timeEndPeriod
+    timeGetDevCaps=proxy_timeGetDevCaps
+    timeGetSystemTime=proxy_timeGetSystemTime
     timeGetTime=proxy_timeGetTime
     timeKillEvent=proxy_timeKillEvent
     timeSetEvent=proxy_timeSetEvent
