@@ -31,7 +31,7 @@ distributed.
 
 ### CD and portable installer
 
-![Pitfall Modified installer showing source, destination, and music choices](docs/images/installer.jpg)
+![Pitfall Modified installer showing source, destination, and music choices](docs/images/installer.png)
 
 ## Highlights
 
