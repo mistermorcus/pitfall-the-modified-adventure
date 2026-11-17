@@ -170,9 +170,16 @@ Pitfall: The Mayan Adventure, its name, and its original files are owned by
 their respective rights holders. This is an unofficial fan-made compatibility
 project and is not affiliated with or endorsed by Activision.
 
-## Project status
+## License
 
-Version 0.3 introduces the byte-identical executable architecture. The
-project’s own licensing terms have not yet been selected; the included
-third-party WAIL component remains governed by its MIT license.
+The original code and documentation in this repository are available under
+the [MIT License](LICENSE). The included third-party WAIL component remains
+governed by its separately retained MIT license and copyright notice under
+`third_party/pitfall-win11-wail/`.
+
+The project license does **not** grant rights to *Pitfall: The Mayan
+Adventure*, the Pitfall or Activision names and trademarks, or any original
+game executable, data, artwork, audio, music, or other assets. Those materials
+are not included in this repository or its release installer and remain the
+property of their respective rights holders.
 
