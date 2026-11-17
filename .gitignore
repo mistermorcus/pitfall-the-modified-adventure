@@ -1,0 +1,35 @@
+# Compiled output
+artifacts*/
+*.dll
+*.exe
+*.obj
+*.lib
+*.exp
+*.pdb
+*.ilk
+*.sha256
+
+# Retail game data and extracted audio
+ASSETS/
+assets/
+music/
+*.bin
+*.cue
+*.iso
+*.wav
+
+# Runtime and diagnostic output
+*.log
+*-timing.csv
+WAIL-*.wav
+
+# Installer payload assembled from local builds
+installer/payload/
+
+# Local/editor files
+.vs/
+.vscode/
+*.user
+Thumbs.db
+desktop.ini
+
