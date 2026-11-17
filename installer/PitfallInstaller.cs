@@ -17,9 +17,9 @@ using Microsoft.Win32;
 [assembly: AssemblyCompany("Pitfall Modified Project")]
 [assembly: AssemblyProduct("Pitfall Modified")]
 [assembly: AssemblyCopyright("Copyright © 2026 Pitfall Modified Project")]
-[assembly: AssemblyVersion("0.3.0.0")]
-[assembly: AssemblyFileVersion("0.3.0.0")]
-[assembly: AssemblyInformationalVersion("0.3.0")]
+[assembly: AssemblyVersion("0.3.1.0")]
+[assembly: AssemblyFileVersion("0.3.1.0")]
+[assembly: AssemblyInformationalVersion("0.3.1")]
 
 namespace PitfallModifiedInstaller
 {
@@ -68,7 +68,7 @@ namespace PitfallModifiedInstaller
         public InstallerForm()
         {
             Text = "Pitfall Modified Installer";
-            ClientSize = new Size(650, 560);
+            ClientSize = new Size(650, 572);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             StartPosition = FormStartPosition.CenterScreen;
@@ -88,22 +88,22 @@ namespace PitfallModifiedInstaller
             Button detect = NewButton("Detect CD", 530, 146, 100, 28);
             detect.Click += delegate { DetectCd(true); };
             Controls.Add(detect);
-            Controls.Add(NewLabel("Select the disc root, its ASSETS folder, or an existing local ASSETS folder.", 22, 144, 490, 34));
-            cdStatus.SetBounds(22, 168, 600, 20);
+            Controls.Add(NewLabel("Select the disc root, its ASSETS folder, or an existing local ASSETS folder.", 22, 144, 490, 22));
+            cdStatus.SetBounds(22, 168, 600, 24);
             cdStatus.ForeColor = Color.DimGray;
             Controls.Add(cdStatus);
 
-            Controls.Add(NewLabel("Install location", 20, 188, 200, 22));
-            destinationBox.SetBounds(20, 212, 500, 25);
+            Controls.Add(NewLabel("Install location", 20, 200, 200, 22));
+            destinationBox.SetBounds(20, 224, 500, 25);
             destinationBox.Text = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "My Games", "Pitfall Modified");
             Controls.Add(destinationBox);
-            Button destinationBrowse = NewButton("Browse…", 530, 210, 100, 28);
+            Button destinationBrowse = NewButton("Browse…", 530, 222, 100, 28);
             destinationBrowse.Click += delegate { BrowseDestination(); };
             Controls.Add(destinationBrowse);
-            Controls.Add(NewLabel("Game files will be installed in an ASSETS subfolder here.", 22, 240, 480, 22));
+            Controls.Add(NewLabel("Game files will be installed in an ASSETS subfolder here.", 22, 252, 480, 22));
 
-            Controls.Add(NewLabel("Music source", 20, 276, 200, 22));
-            audioBox.SetBounds(20, 300, 250, 25);
+            Controls.Add(NewLabel("Music source", 20, 288, 200, 22));
+            audioBox.SetBounds(20, 312, 250, 25);
             audioBox.DropDownStyle = ComboBoxStyle.DropDownList;
             audioBox.Items.AddRange(new object[] {
                 "Automatic (files, then CD)", "Play from physical CD",
@@ -115,24 +115,24 @@ namespace PitfallModifiedInstaller
             Controls.Add(audioBox);
 
             musicLabel.Text = "Music source";
-            musicLabel.SetBounds(290, 276, 150, 22);
+            musicLabel.SetBounds(290, 288, 150, 22);
             Controls.Add(musicLabel);
-            musicBox.SetBounds(290, 300, 230, 25);
+            musicBox.SetBounds(290, 312, 230, 25);
             Controls.Add(musicBox);
             musicBrowse.Text = "Browse…";
-            musicBrowse.SetBounds(530, 298, 100, 28);
+            musicBrowse.SetBounds(530, 310, 100, 28);
             musicBrowse.Click += delegate { BrowseMusic(); };
             Controls.Add(musicBrowse);
 
             desktopShortcut.Text = "Create desktop shortcut";
-            desktopShortcut.SetBounds(20, 340, 210, 24);
+            desktopShortcut.SetBounds(20, 352, 210, 24);
             Controls.Add(desktopShortcut);
             startShortcut.Text = "Create Start Menu shortcut";
-            startShortcut.SetBounds(250, 340, 220, 24);
+            startShortcut.SetBounds(250, 352, 220, 24);
             startShortcut.Checked = true;
             Controls.Add(startShortcut);
 
-            logBox.SetBounds(20, 378, 610, 118);
+            logBox.SetBounds(20, 390, 610, 118);
             logBox.Multiline = true;
             logBox.ReadOnly = true;
             logBox.ScrollBars = ScrollBars.Vertical;
@@ -140,11 +140,11 @@ namespace PitfallModifiedInstaller
             Controls.Add(logBox);
 
             installButton.Text = "Install";
-            installButton.SetBounds(420, 512, 100, 32);
+            installButton.SetBounds(420, 524, 100, 32);
             installButton.Click += delegate { Install(); };
             Controls.Add(installButton);
             closeButton.Text = "Close";
-            closeButton.SetBounds(530, 512, 100, 32);
+            closeButton.SetBounds(530, 524, 100, 32);
             closeButton.Click += delegate { Close(); };
             Controls.Add(closeButton);
             FormClosing += delegate(object sender, FormClosingEventArgs e) {
@@ -720,7 +720,7 @@ namespace PitfallModifiedInstaller
             using (RegistryKey key = Registry.CurrentUser.CreateSubKey(UninstallRegistryPath)) {
                 if (key == null) throw new InvalidOperationException("Windows could not register the uninstaller.");
                 key.SetValue("DisplayName", "Pitfall Modified", RegistryValueKind.String);
-                key.SetValue("DisplayVersion", "0.3.0", RegistryValueKind.String);
+                key.SetValue("DisplayVersion", "0.3.1", RegistryValueKind.String);
                 key.SetValue("Publisher", "Pitfall Modified Project", RegistryValueKind.String);
                 key.SetValue("InstallLocation", root, RegistryValueKind.String);
                 key.SetValue("DisplayIcon", gameExe, RegistryValueKind.String);
