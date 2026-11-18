@@ -954,7 +954,6 @@ static MMRESULT WINAPI compatible_joy_get_pos(UINT id, LPJOYINFO info) {
     xinput_position(&state.Gamepad, &info->wXpos, &info->wYpos);
     info->wZpos = 32767;
     info->wButtons = xinput_buttons(&state.Gamepad);
-    update_xinput_shortcuts(info->wButtons);
     return JOYERR_NOERROR;
 }
 
